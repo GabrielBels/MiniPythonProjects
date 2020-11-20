@@ -1,4 +1,5 @@
-#Exercicios: Faça um programa que jogue par ou impar com o computador. O jogo só sera interrompido quando o jogador PERDER, mostrando o total de vitórias consecutivas que ele conquistou no fim do jogo.
+#Exercicios: Faça um programa que jogue par ou impar com o computador. 
+# O jogo só sera interrompido quando o jogador PERDER, mostrando o total de vitórias consecutivas que ele conquistou no fim do jogo.
 import random, time
 def parImpar():
     ganhador = None
