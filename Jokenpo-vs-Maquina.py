@@ -1,4 +1,4 @@
-#Exercicio 45: Faça um programa onde o computador joga Jokenpô com você
+#JOGUE JOKENPÔ CONTRA SEU PROPRIO COMPUTADOR
 import random, time
 sinal = ['Pedra', 'Papel', 'Tesoura']
 vitoriaPc = 0
@@ -15,7 +15,7 @@ while vitoriaPc < 3 and vitoriaUser < 3:
         time.sleep(1)
     else: 
         time.sleep(1)
-        print('PLACAR MÁQUINA {} X {} USER.'.format(vitoriaPc, vitoriaUser))
+        print('\033[1;30;43mPLACAR MÁQUINA {} X {} USER\033[0;0m'.format(vitoriaPc, vitoriaUser))
     print('---------\nPEDRA\nPAPEL\nTESOURA\n---------\nDigite qual você quer?')
     sinalUser = input('').capitalize()
     time.sleep(1)
@@ -25,7 +25,7 @@ while vitoriaPc < 3 and vitoriaUser < 3:
         time.sleep(1)
         print('A máquina escolheu {}.'.format(sinalPc)) 
         time.sleep(1)
-        print('Vitória para o usuário.\n')
+        print('\033[1;32;1mVitória para o usuário!\033[0;0m\n')
         time.sleep(2)
     elif (sinalPc == 'Pedra' and sinalUser == 'Tesoura') or (sinalPc == 'Papel' and sinalUser == 'Pedra') or (sinalPc == 'Tesoura' and sinalUser == 'Papel'):
         rodada = rodada + 1 
@@ -33,7 +33,7 @@ while vitoriaPc < 3 and vitoriaUser < 3:
         time.sleep(1)
         print('A máquina escolheu {}.'.format(sinalPc))
         time.sleep(1)
-        print('Vitória para a máquina.\n')
+        print('\033[1;31;1mVitória para a máquina.\033[0;0m\n')
         time.sleep(2)
     elif (sinalPc == 'Pedra' and sinalUser == 'Pedra') or (sinalPc == 'Papel' and sinalUser == 'Papel') or (sinalPc == 'Tesoura' and sinalUser == 'Tesoura'):
         rodada = rodada + 1 
@@ -44,7 +44,8 @@ while vitoriaPc < 3 and vitoriaUser < 3:
         time.sleep(2)
     else:
         print('Opção inválida. :(\n')
+        rodada = rodada + 1 
 if vitoriaPc == 3:
-    print('Que pena, a máquina ganhou! :(')
+    print('\033[1;31;1mQue pena, a máquina ganhou! :(\033[0;0m')
 elif vitoriaUser == 3:
-    print('PARABÉNS, VOCÊ GANHOU! :)')
+    print('\033[1;32;1mPARABÉNS, VOCÊ GANHOU! :)\033[0;0m')
